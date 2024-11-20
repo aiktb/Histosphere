@@ -1,16 +1,31 @@
 <script lang="ts" setup>
-import { Button } from "~/components/ui/button";
+const inoperable = ref(false);
+const protocol = ref("");
+const host = ref("");
 
-const count = ref(0);
+const { t } = useI18n();
+onMounted(async () => {
+  const [tab] = await browser.tabs.query({ active: true, currentWindow: true });
+  const historyUrlRegex = /^(?<protocol>https?|chrome-extension):\/\//;
+  const tabUrl = tab?.url
+  if (!tabUrl) {
+    inoperable.value = true;
+    return;
+  }
+  const matchedProtocol = tabUrl.match(historyUrlRegex)?.groups?.protocol
+  if (!matchedProtocol) {
+    inoperable.value = true;
+    return;
+  }
+  protocol.value = matchedProtocol;
+  host.value = new URL(tabUrl).host;
+});
 </script>
 
 <template>
   <div class="flex h-full flex-col items-center justify-center">
-    <div class="flex size-10 items-center justify-center font-mono text-lg font-bold">
-      "{{ count }}"
-    </div>
-    <Button size="sm" @click="count++">
-      <span>Clink me</span>
-    </Button>
+    <header class="">
+      <div>{{ t("currentHost", { host }) }}</div>
+    </header>
   </div>
 </template>

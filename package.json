@@ -2,7 +2,7 @@
   "name": "histosphere",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@9.14.1",
   "description": "Browser history enhancements, fine-grained control, and behavioral analysis.",
   "engines": {
     "node": ">=22.11.0"
@@ -17,36 +17,39 @@
     "postinstall": "wxt prepare"
   },
   "dependencies": {
+    "@intlify/core-base": "^10.0.4",
     "@vueuse/core": "^11.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "radix-vue": "^1.9.8",
+    "dexie": "^4.0.10",
+    "radix-vue": "^1.9.10",
     "tailwind-merge": "^2.5.4",
-    "vue": "^3.5.12",
+    "vue": "^3.5.13",
     "vue-i18n": "^10.0.4",
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.8.0",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@commitlint/types": "^19.0.3",
+    "@antfu/eslint-config": "^3.9.2",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@commitlint/types": "^19.5.0",
     "@egoist/tailwindcss-icons": "^1.8.1",
     "@fontsource/inter": "^5.1.0",
     "@fontsource/ubuntu-mono": "^5.1.0",
-    "@iconify-json/lucide": "^1.2.11",
-    "@types/chrome": "^0.0.280",
-    "@types/node": "^22.8.6",
+    "@iconify-json/lucide": "^1.2.15",
+    "@intlify/eslint-plugin-vue-i18n": "^3.1.0",
+    "@types/chrome": "^0.0.283",
+    "@types/node": "^22.9.1",
     "@wxt-dev/auto-icons": "^1.0.2",
-    "@wxt-dev/module-vue": "^1.0.1",
+    "@wxt-dev/module-vue": "^1.0.2",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.13.0",
+    "eslint": "^9.15.0",
     "eslint-plugin-tailwindcss": "^3.17.5",
-    "tailwindcss": "^3.4.14",
+    "tailwindcss": "^3.4.15",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.6.3",
-    "vite-plugin-svgr": "^4.2.0",
+    "vite-plugin-svgr": "^4.3.0",
     "vue-tsc": "^2.1.10",
-    "wxt": "^0.19.13"
+    "wxt": "^0.19.16"
   }
 }

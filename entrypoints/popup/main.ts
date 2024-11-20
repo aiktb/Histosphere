@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+import { setupI18n } from "~/lib/i18n";
 
 import App from "./App.vue";
 
@@ -10,4 +11,6 @@ import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
 import "@fontsource/inter/700.css";
 
-createApp(App).mount("#app");
+const i18n = await setupI18n();
+
+createApp(App).use(i18n).mount("#app");
