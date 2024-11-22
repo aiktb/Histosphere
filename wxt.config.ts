@@ -12,6 +12,7 @@ export default defineConfig({
     description: "Browser history enhancements, fine-grained control, and behavioral analysis.",
     version: "0.0.1",
     permissions: ["storage", "history"],
+    incognito: "not_allowed",
   },
   modules: ["@wxt-dev/module-vue", "@wxt-dev/auto-icons"],
   imports: {
