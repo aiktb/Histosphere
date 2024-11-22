@@ -8,7 +8,7 @@ import { defineConfig } from "wxt";
 export default defineConfig({
   extensionApi: "chrome",
   manifest: {
-    name: "Histosphere",
+    name: "Auto-delete & Analyze History - Histosphere",
     description: "Browser history enhancements, fine-grained control, and behavioral analysis.",
     version: "0.0.1",
     permissions: ["storage", "history"],
@@ -19,7 +19,7 @@ export default defineConfig({
     presets: ["vue-i18n", "vue"],
   },
   autoIcons: {
-    baseIconPath: "assets/wxt.svg",
+    baseIconPath: "assets/logo.png",
   },
   vite: () => ({
     css: {
