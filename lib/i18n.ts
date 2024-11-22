@@ -7,7 +7,7 @@ import { userConfig } from "./storage";
 
 const FALLBACK_LOCALE = "en";
 
-export const SUPPORT_LOCALES = [FALLBACK_LOCALE, "ja", "cn"] as const;
+export const SUPPORT_LOCALES = [FALLBACK_LOCALE] as const;
 
 export type SupportLocale = typeof SUPPORT_LOCALES[number];
 
