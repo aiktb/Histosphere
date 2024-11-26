@@ -1,4 +1,3 @@
-import { createApp } from "vue";
 import { setupI18n } from "~/lib/i18n";
 
 import App from "./App.vue";

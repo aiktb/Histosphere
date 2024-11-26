@@ -1,9 +1,11 @@
 {
-  "name": "histosphere",
+  "name": "perfect-history",
   "type": "module",
+  "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@9.14.1",
   "description": "Browser history enhancements, fine-grained control, and behavioral analysis.",
+  "homepage": "https://perfecthistory.com",
   "engines": {
     "node": ">=22.11.0"
   },
@@ -18,10 +20,12 @@
   },
   "dependencies": {
     "@intlify/core-base": "^10.0.4",
+    "@js-temporal/polyfill": "^0.4.4",
     "@vueuse/core": "^11.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "idb": "^8.0.0",
+    "picomatch": "^4.0.2",
     "radix-vue": "^1.9.10",
     "tailwind-merge": "^2.5.4",
     "vue": "^3.5.13",
@@ -40,6 +44,7 @@
     "@intlify/eslint-plugin-vue-i18n": "^3.1.0",
     "@types/chrome": "^0.0.283",
     "@types/node": "^22.9.1",
+    "@types/picomatch": "^3.0.1",
     "@wxt-dev/auto-icons": "^1.0.2",
     "@wxt-dev/module-vue": "^1.0.2",
     "autoprefixer": "^10.4.20",
