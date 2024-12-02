@@ -19,7 +19,7 @@
     "postinstall": "wxt prepare"
   },
   "dependencies": {
-    "@intlify/core-base": "^10.0.4",
+    "@intlify/core-base": "^10.0.5",
     "@js-temporal/polyfill": "^0.4.4",
     "@vueuse/core": "^11.2.0",
     "class-variance-authority": "^0.7.0",
