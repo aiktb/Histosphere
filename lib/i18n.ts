@@ -1,7 +1,7 @@
-import { createCoreContext, fallbackWithLocaleChain } from "@intlify/core-base";
-import { createI18n, type I18n } from "vue-i18n";
-
 import type en from "~/assets/_locales/en.json";
+import { createCoreContext, fallbackWithLocaleChain } from "@intlify/core-base";
+
+import { createI18n, type I18n } from "vue-i18n";
 
 import { userConfig } from "./storage";
 
@@ -40,7 +40,9 @@ export async function setI18nLanguage(i18n: I18n, locale: SupportLocale) {
   // @ts-expect-error https://github.com/intlify/vue-i18n/issues/1003
   i18n.global.locale.value = locale;
 
-  await userConfig.setValue({ interfaceLanguage: locale });
+  await userConfig.setValue((draft) => {
+    draft.interfaceLanguage = locale;
+  });
   document.documentElement.setAttribute("lang", locale);
   await loadLocaleMessages(i18n, locale);
 }

@@ -1,6 +1,7 @@
 {
   "extends": "./.wxt/tsconfig.json",
   "compilerOptions": {
+    "types": ["unplugin-vue-router/client"],
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
